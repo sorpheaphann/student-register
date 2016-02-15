@@ -1,3 +1,4 @@
+//  Event
 Template.registerAction.events({
     'click .jsUpdate': function () {
         FlowRouter.go('registerUpdate', {id: this._id});
@@ -14,6 +15,7 @@ Template.registerAction.events({
             });
     }
 });
+// Helper
 Template.registerUpdate.helpers({
     data: function () {
         var id = FlowRouter.getParam('id');
@@ -21,7 +23,8 @@ Template.registerUpdate.helpers({
         return register;
     }
 });
-//hook
+
+// Hook
 AutoForm.hooks({
     registerInsert: {//id autoform
         before: {
